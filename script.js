@@ -1,7 +1,6 @@
 let loadingTextInterval;
 let loadingText = document.getElementById('loadingText');
 let displayText = document.getElementById('displayText');
-let button = document.getElementById('loadTextBtn');
 
 function startLoadingAnimation() {
     let dots = 0;
@@ -26,7 +25,7 @@ async function loadText() {
     }
 }
 
-button.addEventListener('click', async function() {
+window.addEventListener('click', async function() {
     clearInterval(loadingTextInterval); // Stop the loading animation
     loadingText.style.display = 'none'; // Hide loading text
     displayText.textContent = 'Loading...'; // Temporary text
